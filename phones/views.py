@@ -18,7 +18,7 @@ def show_catalog(request):
         phone = phones.order_by('price').reverse()
     else:
         phone = phones
-    context = {'phones_list': phone}
+    context = {'phones': phone}
     return render(request, template, context)
 
 
